@@ -1,19 +1,22 @@
 <template>
-<h1 class="card-header">{{ message }}</h1>
-<p>TypeScriptとVue.jsで書きました</p>
-<h2 v-on:click="doAction">クリックしてね</h2>
-<h3>{{ val }} </h3>
+  <h1>今日の運勢</h1>
+  <p v-on:click="doAction">クリックして占う</p>
+  <p> {{ val }}</p>
+
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
 
 export default class HelloWorld extends Vue {
-  message = "サンプルウェブページ"
-  val = 1
-
-  doAction():void{
-    this.val += 1
+ val = ""
+  doAction(): void {
+    const unsei = ["🌸🌸🌸大吉🌸🌸🌸", "😇😇😇大凶😇😇😇", "👿👿👿凶👿👿👿"]
+    this.val = unsei[this.getRandomInt(unsei.length)]
+  }
+  
+  getRandomInt(max: number) {
+    return Math.floor(Math.random() * max);
   }
 }
 </script>
