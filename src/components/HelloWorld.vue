@@ -34,6 +34,10 @@
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
 
+// propsはコンポーネントから渡ってくる属性を定義している
+// つまり、msgという属性が受け渡し可能ですよ、になる
+// 試しにprops:{}をコメントアウトしブラウザリロードしてみると、
+// Appコンポーネントから文字列が渡されなかった結果が表示されている
 @Options({
   props: {
     msg: String
