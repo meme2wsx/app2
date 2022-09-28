@@ -1,24 +1,14 @@
 # app2
 
-## Project setup
+### プロジェクトの作成
 ```
-npm install
+npx vue create app2
 ```
+選択肢の中で、以下に注意
+* typescriptをインストールする
+* class-stype コンポーネントを利用する
 
-### Compiles and hot-reloads for development
+### 起動
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
